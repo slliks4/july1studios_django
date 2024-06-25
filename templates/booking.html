@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="about_firstpage">
+        <div class="text">
+            <h1>book us online </h1>
+            <p>
+                Fill out the booking page and tell us about yourself and how we can work with you. At this point, we'll get accross to you in less than 24 hours.
+            </p>
+        </div>
+    </div>
+    <div class="booking_secondpage">
+        <form action="{% url 'booking' %}" method="POST">
+            {% csrf_token %}
+            <div class="left">
+                <div>
+                    <div class="up">
+                        <h1>july first studio</h1>
+                    </div>
+                    <div class="down">
+                        <select name="date" id="date" onchange="Select()">
+                            <option value="1">one day event</option>
+                            <option value="2">multiple days</option>
+                        </select>
+                        <div class="date">
+                            <div>
+                                <label for="date">start date <br><span>(DD/MM/YYYY)</span></label>
+                                {{form.start_date}}
+                            </div>
+                            <div>
+                                <label for="date">end date <br><span>(DD/MM/YYYY)</span> </label>
+                                {{form.end_date}}
+                            </div>
+                        </div>
+                        <div id="main_date">
+                            <label for="date">event date (DD/MM/YYYY)</label>
+                            {{form.date}}
+                        </div>
+                        <label for="events">type of event</label>
+                        {{form.event_category}}
+                        <label for="email">Email:</label>
+                        {{form.email}}
+                        <label for="number">tel</label>
+                        {{form.tel}}
+                        <label for="location">enter event desired location</label>
+                        {{form.event_location}}
+                    </div>
+                </div>
+                <p>@Copyright 2023 july first studio</p>
+            </div>
+            <div class="right">
+                <div class="inline">
+                    <div class="first_name">
+                        <label for="first_name">First name</label>
+                        {{form.first_name}}
+                    </div>
+                    <div class="last_name">
+                        <label for="last_name">last name</label>
+                        {{form.last_name}}
+                    </div>
+                </div>
+                <div class="text_area">
+                    <label for="description">enter a breif description</label>
+                    <br><br>
+                    {{form.description}}
+                </div>
+                <div class="submit">
+                    <input type="submit" value="book now">
+                </div>
+            </div>
+        </form>
+    </div>
+    {% block script %}
+        <script src="{% static 'script/booking.js' %}"></script>
+    {% endblock %}    
+{% endblock %} 

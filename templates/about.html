@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}  
+    <div class="about_firstpage">
+        <div class="text">
+            <h1>About us </h1>
+            <p>Hello, we are July First Studio, a professional media house based in Port Harcourt, Nigeria.</p>
+        </div>
+    </div>
+    <div class="about_secondpage">
+        <div>
+            <p>
+                We're not just a media house, we're your friend and partner. Nothing is more important to us than sharing in your happy and exciting moments. 
+                <br>
+                In our work, we use tools of art, photography, documentary raportage, film making and media coverage of weddings, burials, shows etc. We capture emotions, beautiful and happy moments make our hearts beat faster. And with our work, we immortalize your memories and story. We are really happy to capture your moments and at the same time create something timeless and memorable. Sharing your joy is our motivation and we can't wait to embark on this journey with you. You think we can work together? Leave us a message and let's get started.
+            </p>
+            <br>
+            <div class="text">
+                <div>
+                    <h3>Olusola Bridget Chinasa </h3>
+                    <p>Founder of July First Studio</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="{% static '/img/image21.jpg' %}" alt="img">
+        </div>
+    </div>
+    <div class="about_thirdpage">
+        <div class="left">
+            <img src="{% static '/img/image15.jpg' %}" alt="img">
+            <h1>Vision</h1>
+            <p>
+                To be the world's leading Media brand in the entertainment industry. We are poised to pioneer the improvement of the global media and entertainment industry into a whole new level, contributing our quota to the beauty, fun and development of the world as our company is marked for excellence and professionalism with great customer service, giving our clients a pleasurable experience of their lives.
+            </p>
+        </div>
+        <div class="right">
+            <span>
+                <h1>Mission </h1>
+                <p>
+                    To provide top notch professionalism and excellent services, As client satisfaction is our priority. We do this by working closely with our customers and ensuring that we match our promises and customer desires with actual satisfactory results and in line with our core values which are;
+                    <br><br>
+                    <b>Passion:</b>We work with a positive attitude and teamwork to serve our clients better
+                    <br>
+                    <b>Expertise:</b>
+                    We're committed to applying our expertise on delivering quality services.
+                    <br>
+                    <b>Respect:</b>
+                    We treat all our clients with respect and integrity in order to earn their trust.
+                </p>
+            </span>
+            <img src="{% static '/img/image16.jpg' %}" alt="img">
+        </div>
+    </div>
+    <div class="about_fourthpage">
+        <h1>Professional Team</h1>
+        <p>some of our staff:</p>
+        <div class="team" >
+            <div>
+                <img src="{% static '/img/image21.jpg' %}" alt="">
+                <h1>Managing Director <br> Olusola Bridget Chinasa</h1>
+            </div>
+            <div>
+                <img src="{% static '/img/image22.jpg' %}" alt="">
+                <h1> Manager <br> miracle porole</h1>
+            </div>
+            <div>
+                <img src="{% static '/img/image20.jpg' %}" alt="">
+                <h1>client service officer <br> rose joel</h1>
+            </div>
+        </div>
+    </div>
+    {% block script %}
+        <script src="{% static 'script/comment.js' %}"></script>
+    {% endblock %}
+{% endblock %}

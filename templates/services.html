@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="services_firstpage">
+        <div class="text">
+            <h1>
+                our services ....
+            </h1>
+            <p>At July First Studios, you're not a client but a friend, and we love you, we'll not offer you a cooperate process, our services are tailor suited to meet your needs and satisfaction</p>
+        </div>
+    </div>
+    <div class="services_secondpage">
+        <h1>Some of the Services we render are :</h1>
+    </div>
+    <div class="services_thirdpage">
+        <div>
+            <h1>Photo sessions</h1><br>
+            <p>
+                We create and Save beautiful memories in snaps. Moments and stories created are preserved with colors and light.
+                Our photography sessions are not restricted to the beauty of our studio, we also render outdoor services in different locations within and outside Nigeria.                
+            </p>
+        </div>
+        <div>
+            <h1>Videography and Event Coverage</h1><br>
+            <p>
+                We also record beautiful memories and create movies, we make videos of special occasions such as weddings, birthday parties, funerals, Fashion, and music shows.
+                With the aid of our good equipment and trained personnel, we make High Definition standard videos that best define Art and Cinematography.
+            </p>
+        </div>
+        <div>
+            <h1>Photo books</h1><br>
+            <p>
+                At July first studio, memories from your events and photo sessions can be compiled in a book. We design pictures and document them in a book-like form. We make every design beautiful and durable
+            </p>
+        </div>
+        <div>
+            <h1>Drone Services</h1><br>
+            <p>
+                At July First Studio, we render drone services, giving you a perfect aerial view of any activity we're covering. 
+            </p>
+        </div>
+        <div>
+            <h1>Passport</h1><br>
+            <p>
+                We make standard passports and Visa passports for every country, with our level of professionalism we know every requirement for these countries if it's a visa passport.
+                We produce in any form of your choice ( hard or soft).
+            </p>
+        </div>
+        <div>
+            <h1>Make Up</h1><br>
+            <p>
+                Our in house or outdoor makeovers are exquisitely done with love because we care  about you so we give you the very best of makeover experience
+            </p>
+        </div>
+        <div>
+            <h1>Photo Enlargement</h1><br>
+            <p>
+                Need to make an enlargement of your happy moments, we make portrait and big-size photographs, We serve according to your demand.
+            </p>
+        </div>
+        <div>
+            <h1>Frames</h1><br>
+            <p>
+                We make frames of different classes and types, we define quality and taste with our frames
+            </p>
+        </div>
+        <div>
+            <h1>Consulting</h1><br>
+            <p>
+                We're willing to work with you to improve your media experience either as an individual or a corporate body. We offer professional advice and give good analysis of the market and how to grow yourself as a photographer
+            </p>
+        </div>
+        <div>
+            <h1>Training</h1><br>
+            <p>
+                Choosing photography as a skill, July first studio guides and train people in photography and videography, This is done with well-trained personnel, also in a serene environment.
+            </p>
+        </div>
+        <div>
+            <h1>Event Planning</h1><br>
+            <p>
+                We also plan Events at every level, our services are not restricted by place, in or out side Nigeria we execute perfect event planning. You can always contact us for our services.
+            </p>
+        </div>
+    </div>
+    <div class="services_fourthpage">
+        <h1>booking steps</h1><br>
+        <h3>It's super easy to book for our services, all you have to do is follow these simple steps below</h3><br>
+        <div class="pricing_plan">
+            <div class="flex">
+                <div>
+                    <h2>reach out to us </h2>
+                    <p>fill the form</p>
+                    <p> tell us about yourself and how we can work with you</p>
+                    <p>less than 24 hour response time</p>
+                </div>
+                <div class="booking">
+                    <a href="{% url 'booking' %}">book now</a>
+                </div>
+            </div>
+            <div class="flex">
+                <div>
+                    <h2>make payment</h2>
+                    <p>After you get in touch with us,</p>
+                    <p>
+                        we will confirm your date then you can proceed to make payment to secure your booking.
+                    </p>
+                </div>
+                <div class="booking">
+                    <a href="{% url 'booking' %}">book now</a>
+                </div>
+            </div>
+            <div class="flex">
+                <div>
+                    <h2>delivery</h2>
+                    <p>
+                        After the two steps above have been met, we will proceed to the location of your choice with our staff and equipment to deliver on the task or event that you desire and you can trust on our Excellence and quality of Service
+                    </p>
+                </div>
+                <div class="booking">
+                    <a href="{% url 'contact' %}">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block script %}
+        <script src="{% static 'script/comment.js' %}"></script>
+    {% endblock %}
+{% endblock %}

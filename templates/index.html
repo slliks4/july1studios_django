@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="home_firstpage">
+        <div class="slides">
+            <div class="text">
+                <h1>
+                    Welcome to july first studio
+                </h1>
+                <button onclick="Home_slide(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="image">
+                <video src="{% static 'img/video.mp4' %}" autoplay muted ></video>
+            </div>
+        </div>
+        {% for first_slide in first_slides %}
+        <div class="slides">
+            <div class="text">
+                <h1>
+                    {{first_slide.title}}
+                </h1>
+                <button onclick="Home_slide(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="image">
+                {% if first_slide.pic %}
+                    <img src="{{first_slide.pic.url}}" alt="">
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="home_secondpage">
+        <div class="left">
+            <img src="{% static 'img/image21.jpg' %}" alt="">
+        </div>
+        <div class="right">
+            <h1>
+                Hello, We are July First Studios, a professional media House based in Port Harcourt, Nigeria.
+            </h1>
+            <p>
+                Our vision is to drive the global entertainment industry by providing outstanding services in the global media space. We are focused on delivering on our promises and customer expectations, we work with you to bring your desires to admirable reality.
+            </p>
+            <ul>
+                <li>Skilled and well trained staff </li>
+                <li>Availability of drones, 360 camera and other high tech. Equipments</li>
+                <li>Exceptional work quality</li>
+            </ul>
+            <div class="about_us">
+                <a href="{% url 'about' %}">about us</a>
+            </div>
+        </div>
+    </div>
+    <div class="home_thirdpage">
+        <div class="left">
+            {% for gallery_slide in gallery_slides %}
+            <div class="left_slide">
+                <div class="text">
+                    <a href="{% url 'gallery' %}">our gallery</a>
+                </div>
+                <div class="image">
+                    {% if gallery_slide.pic %}
+                    <img src="{{gallery_slide.pic.url}}" alt="">
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="right">
+            <div class="up">
+                <div>
+                    <div class="text">
+                        <div>
+                            <h1>our services</h1>
+                            <a href="{% url 'services' %}">find out more</a>
+                        </div>
+                    </div>
+                    {% for our_service in our_services %}
+                    <div class="image">
+                        {% if our_service.pic %}
+                        <img src="{{our_service.pic.url}}" alt="">
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="down">
+                <div>
+                    <h1>career opportunities</h1>
+                    <a href="{% url 'career' %}">view more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home_fourthpage">
+        <div class="left">
+            <div class="up">
+                <div>
+                    <h1>for high quality pictures and event coverage</h1>
+                    <a href="{% url 'booking' %}">book now</a>
+                </div>
+            </div>
+            <div class="down">
+                <h2>beautiful moments captured</h2>
+            </div>
+        </div>
+        <div class="right">
+            {% for event_slide in event_slides %}
+            <div class="right_slide">
+                <div class="text">
+                    <div>    
+                        <h1>recent events</h1>
+                        <a href="{% url 'gallery_recent' %}">view more</a>
+                    </div>
+                </div>
+                <div class="image">
+                    {% if event_slide.pic %}
+                    <img src="{{event_slide.pic.url}}" alt="">
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="home_fifthpage">
+        <div class="left">
+            <div class="news_heading">
+                <h1>latest news and update</h1>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right_news">
+                <div class="news">
+                    {% for news_content in news %}
+                    <div class="text">
+                        <a href="{% url 'readmore' news_content.slug %}">
+                            <h2>{{news_content.title|slice:'50'}} ...</h2>
+                            <br>
+                            <p>
+                                {{news_content.content|slice:'100'}}..........
+                            </p>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="view_more">
+                    <a href="{% url 'news' %}">view more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home_sixthpage">
+        <div class="left">
+            <div>
+                <h1> why july first studios?</h1>
+                <a href="{% url 'why_us' %}">how we can help</a>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <h1>how we work? </h1>
+                <a href="{% url 'how_we_work' %}">learn more</a>
+            </div>
+        </div>
+    </div>
+    {% block script %}
+        <script src="{% static 'script/index.js' %}"></script>
+    {% endblock %}
+{% endblock %}  

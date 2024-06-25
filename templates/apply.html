@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <div class="application_firstpage">
+            <div class="text">
+                <h1>
+                    available vacancy ....
+                </h1>
+                <p>Hello, we are july first studio, a professional media house based in Port Harcourt, Nigeria.</p>
+            </div>
+        </div>
+        <div class="application_secondpage">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="left">
+                    <div>
+                        <div class="up">
+                            <h1>july first studio</h1>
+                        </div>
+                        <div class="down">
+                            <label for="vacancy">available vacancy</label>
+                            {{form.vacancy}}
+                            <label for="email">Email:</label>
+                            {{form.email}}
+                            <label for="number">tel</label>
+                            {{form.tel}}
+                            <label for="document">attach your cv in pdf form</label>
+                            {{form.document}}
+                        </div>
+                    </div>
+                    <p>@Copyright 2023 july first studio</p>
+                </div>
+                <div class="right">
+                    <div class="inline">
+                        <div class="first_name">
+                            <label for="first_name">First name</label>
+                            {{form.first_name}}
+                        </div>
+                        <div class="last_name">
+                            <label for="last_name">last name</label>
+                            {{form.last_name}}
+                        </div>
+                    </div>
+                    <div class="text_area">
+                        <label for="description">enter a breif description</label>
+                        <br><br>
+                        {{form.description}}
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="apply now">
+                    </div>
+                </div>
+            </form>
+        </div>
+    {% block script %}
+        <script src="{% static 'script/comment.js' %}"></script>
+    {% endblock %}    
+{% endblock %} 

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="contactus_firstpage">
+        <div class="text">
+            <h1>
+                contact us ....
+            </h1>
+            <p>
+                Hi, thank you for reaching out to us, be assured of the best service
+            </p>
+        </div>
+    </div>
+    <div class="contactus_secondpage">
+        <div class="left">
+            <h2>information</h2>
+            <p>
+                You can book your photo sessions and drop your complaints and suggestions in the comment box
+
+                Kindly contact us through any of our channels below or visit our office address
+                
+            </p>
+            <ul>
+                <li>
+                    <h1>call us</h1>
+                    <a href="tel:+2347065934632">+2347065934632</a>
+                </li>
+                <li>
+                    <h1>send us an email</h1>
+                    <a href="mailto:july1ststudio@gmail.com">july1ststudio@gmail.com</a>
+                </li>
+                <li>
+                    <h1>visit our office</h1>
+                    July First Studios. 6, Market road, Rumoumasi Junction Port Harcourt
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="contact_form">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <h1>get in touch</h1>
+                    <input type="text" name="first_name" id="full_name" placeholder="full name" required >
+                    <input type="email" name="email" id="" placeholder="email" required >
+                    <textarea name="message" id="message" placeholder="your message" required></textarea>
+                    <div class="button">
+                        <button type="submit" >submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% block script %}
+        <script src="{% static 'script/comment.js' %}"></script>
+    {% endblock %}
+{% endblock %}

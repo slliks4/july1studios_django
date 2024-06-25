@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %} 
+    <div class="gallery_firstpage">
+        <div class="text">
+            <h1>
+                our gallery ....
+            </h1>
+            <p>Hello, we are july first studio, a professional media house based in Port Harcourt, Nigeria.</p>
+        </div>
+    </div>
+    <div class="gallery_secondpage">
+        <div class="category">
+            <div class="heading">
+                <ul>
+                    <li><a href="{% url 'gallery' %}">all</a></li>
+                    {% for category in categories %}
+                    <li><a href="{% url 'gallery_others' category.category_name %}" >{{category.category_name}}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="searching">
+                <form action="" method="POST">
+                    <input type="search" name="search_category" id="" placeholder="search anything">
+                    <button type="submit">search</button>
+                </form>
+            </div>
+        </div>
+        <div class="galleries">
+            {% for image in images %}
+            <div>
+                {% if image.pic %}
+                <img src="{{image.pic.url}}" alt="">
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% block script %}
+        <script src="{% static 'script/gallery.js' %}"></script>
+    {% endblock %}
+{% endblock %}

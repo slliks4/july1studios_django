@@ -1,0 +1,1064 @@
+@media only screen and (max-width: 480px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .header{
+        width: 100vw;
+        height: fit-content;
+        flex-direction: row-reverse;
+        position: relative;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    .header .show{
+        display: none;
+    }
+    .header .hidden{
+        display: block;
+    }
+    .header p{
+        writing-mode: horizontal-tb;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .header ul{
+        padding: 40px;
+        text-align: right;
+    }
+    .navbar{
+        position: absolute;
+        top: 60px;
+        right: 100%;
+        background-color: white;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: 95vh;
+        transition: 0.45s ease-in-out;
+    }
+    .second_navbar_show{
+        right: 0;
+    }
+    .body{
+        left: 0%;
+        width: 100vw;
+        border: none;
+        animation: none;
+    }
+    .body .logo{
+        display: none;
+    }
+    footer .signup_email{
+        flex-direction: column;
+        padding: 20px 0px;
+    }
+    footer .signup_email .email input{
+        width: 69%;
+    }
+    footer .signup_email>div{
+        margin-top: 40px;
+        width: 100%;
+    }
+    footer .footer_content{
+        flex-direction: column;
+        margin: 20px 0px;
+    }
+    footer .footer_content>div{
+        width: 100%;
+    }
+    footer .footer_content h3{
+        font-size: 30px;
+        padding: 10px 0px;
+    }
+    footer .footer_content .padding{
+        padding: 0px;
+    }
+
+    /* HOME PAGE */
+    
+    .home_firstpage{
+        height: 40vh;
+    }
+    .home_firstpage .slides .text{
+        height: 40vh;
+    }
+    .home_firstpage .slides .text .fa{
+        font-size: 30px;
+    }
+    .home_firstpage .slides .text h1{
+        font-size: 25px;
+        font-weight: bold;
+        line-height: normal;
+        width: 80%;
+    }
+    .home_secondpage{
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+    .home_secondpage .left{
+        width: 100%;
+        padding: 0px 0px 20px;
+    }
+    .home_secondpage .right{
+        width: 100%;
+    }   
+    .home_thirdpage{
+        flex-direction: column;
+        height: 100%;
+    }
+    .home_thirdpage .left{
+        width: 100%;
+        height: 100%;
+    }
+    .home_thirdpage .left_slide{
+        height: 65vh;
+    }
+    .home_thirdpage .left_slide .text{
+        height: 65vh;
+        padding-left: 5%;
+    }
+    .home_thirdpage .left_slide .image{
+        height: 65vh;
+    }
+    .home_thirdpage .right{
+        width: 100%;
+        height: 65vh;
+    }
+    .home_thirdpage .right .up{
+        height: 32.5vh;
+    }
+    .home_thirdpage .right .up .text{
+        height: 32.5vh;
+        padding-left: 5%;
+    }
+    .home_thirdpage .right .up .image{
+        height: 35vh;
+    } 
+    .home_thirdpage .right .down{
+        height: 32.5vh;
+        padding-left: 5%;
+    }
+    .home_fourthpage{
+        flex-direction: column;
+        height: 100%;
+    }
+    .home_fourthpage .left{
+        width: 100%;
+        height: 100vh;
+    }
+    .home_fourthpage .left .up{
+        padding-left: 5%;
+    }
+    .home_fourthpage .left .down{
+        padding-left: 5%;
+    }
+    .home_fourthpage .right{
+        width: 100%;
+        height: 100%;
+    }
+    .home_fourthpage .right_slide .text{
+        height: 65vh;
+        padding-left: 5%;
+    }
+    .home_fourthpage .right_slide .image{
+        height: 65vh;
+    }
+    .home_fifthpage{
+        flex-direction: column;
+        height: 100%;
+    }
+    .home_fifthpage .left{
+        width: 100%;
+        height: 65vh;
+        padding-left:5%;
+    }
+    .home_fifthpage .right{
+        width: 100%;
+        padding-left: 5%;
+    }
+    .home_fifthpage .right_news{
+        margin-top: 0px;
+    }
+    .home_sixthpage{
+        flex-direction: column;
+        height: 100%;
+    }
+    .home_sixthpage .left{
+        width: 100%;
+        padding-left: 5%;
+    }
+    .home_sixthpage .right{
+        width: 100%;
+        padding-left: 5%;
+    }
+    .home_seventhpage{
+        flex-direction: column  ;
+        padding: 80px 5%;
+    }
+    .home_seventhpage .left{
+        width: 100%;
+    }
+    .home_seventhpage .contact{
+        margin: 40px 0px;
+    }
+    .home_seventhpage .right{
+        width: 100%;
+    }
+    .home_seventhpage .comments div h2{
+        text-align: right;
+        width: 100%;
+        word-wrap: break-word;
+    }
+    /* NEWS PAGE */
+    .news_firstpage .firstpage_body{
+        flex-direction: column;
+    }
+    .news_firstpage .firstpage_body .left{
+        width: 100%;
+        height: 65vh;
+        padding-left: 5%;
+    }
+    .news_firstpage .firstpage_body .right{
+        width: 100%;
+        height: 100%;
+        padding: 40px 5%;
+        flex-direction: column;
+    }
+    .news_firstpage .firstpage_body .news{
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    /* NEW_READ_MORE */
+
+    .news_firstpage .firstpage_body .right_readmore{
+        width: 100%;
+        padding: 40px 5%;
+    }
+
+    /* SERVICES PAGE */
+    .services_firstpage{
+        height: 65vh;
+    }
+    .services_firstpage .text{
+        width: 100%;
+    }
+    .services_firstpage .text h1{
+        font-size: 40px;
+    }
+    .services_firstpage .text p{
+        font-size: 20px;
+    }
+    .services_thirdpage{
+        flex-direction: column;
+    }
+    .services_thirdpage>div{
+        width: 100%;
+    }
+    .pricing_plan{
+        flex-direction: column;
+    }
+    .pricing_plan>div{
+        width: 100%;
+    }
+    .services_fifth{
+        flex-direction: column  ;
+        padding: 80px 5%;
+    }
+    .services_fifth .left{
+        width: 100%;
+    }
+    .services_fifth .contact{
+        margin: 40px 0px;
+    }
+    .services_fifth .right{
+        width: 100%;
+    }
+
+    /* CONTACT US */
+
+    .contactus_firstpage{
+        height: 65vh;
+    }
+    .contactus_firstpage .text{
+        width: 100%;
+    }
+    .contactus_firstpage .text h1{
+        font-size: 40px;
+    }
+    .contactus_firstpage .text p{
+        font-size: 20px;
+    }
+    .contactus_secondpage{
+        flex-direction: column;
+    }
+    .contactus_secondpage .left{
+        width: 100%;
+    }
+    .contactus_secondpage .right{
+        width: 100%;
+        margin-top: 20px;
+        box-shadow: 2px 5px 5px 2px silver;
+    }
+    .contactus_secondpage .right button{
+        width: 40%;
+    }
+
+    /* GALLERY PAGE */
+    
+    .gallery_firstpage{
+        height: 65vh;
+    }
+    .gallery_firstpage .text{
+        width: 100%;
+    }
+    .gallery_firstpage .text h1{
+        font-size: 40px;
+    }
+    .gallery_firstpage .text p{
+        font-size: 20px;
+    }
+    .gallery_secondpage .category .heading ul{
+        flex-wrap: wrap;
+    }
+    .gallery_secondpage .category .heading ul li{
+        margin: 10px 0px;
+    }
+    .gallery_secondpage .category{
+        flex-direction: column;
+    }
+    .gallery_secondpage .category .searching{
+        display: none;
+    }
+    .gallery_secondpage .galleries{
+        flex-direction: column;
+    }
+    .gallery_secondpage .galleries>div{
+        width: 100%;
+    }
+    .gallery_thirdpage{
+        flex-direction: column  ;
+        padding: 80px 5%;
+    }
+    .gallery_thirdpage .left{
+        width: 100%;
+    }
+    .gallery_thirdpage .contact{
+        margin: 40px 0px;
+    }
+    .gallery_thirdpage .right{
+        width: 100%;
+    }
+
+
+    /* ABOUT US PAGE */
+
+    .about_firstpage{
+        height: 65vh;
+    }
+    .about_firstpage .text{
+        width: 100%;
+    }
+    .about_firstpage .text h1{
+        font-size: 40px;
+    }
+    .about_firstpage .text p{
+        font-size: 20px;
+    }
+    .about_secondpage{
+        flex-direction: column-reverse;
+    }
+    .about_secondpage>div{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .about_thirdpage{
+        flex-direction: column;
+    }
+    .about_thirdpage>div{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .about_fourthpage .team{
+        flex-direction: column;
+    }
+    .about_fourthpage .team>div{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .about_thirdpage .right{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about_thirdpage .right img{
+        margin-bottom: 40px;
+    }
+    .about_fifthpage{
+        flex-direction: column  ;
+        padding: 80px 5%;
+    }
+    .about_fifthpage .left{
+        width: 100%;
+    }
+    .about_fifthpage .contact{
+        margin: 40px 0px;
+    }
+    .about_fifthpage .right{
+        width: 100%;
+    }
+
+
+    /* BOOKING */
+
+    .booking_firstpage{
+        height: 65vh;
+    }
+    .booking_firstpage .text{
+        width: 100%;
+    }
+    .booking_firstpage .text h1{
+        font-size: 40px;
+    }
+    .booking_firstpage .text p{
+        font-size: 20px;
+    }
+    .booking_secondpage form{
+        flex-direction: column;
+    }
+    .booking_secondpage form .left{
+        width: 100%;
+        padding: 0px;
+        border: none;
+    }
+    .booking_secondpage form .right{
+        width: 100%;
+        padding: 0px;
+        margin: 20px 0px 0px;
+        border: none;
+    }
+    .booking_secondpage form .right .inline{
+        flex-wrap: wrap;
+    }
+    .booking_secondpage form .right .first_name,.booking_secondpage form .right .last_name{
+        width: 100%;
+    }
+    
+    /* HOW WE WORK */
+
+    .how_we_work_firstpage{
+        height: 65vh;
+    }
+    .how_we_work_firstpage .text{
+        width: 100%;
+    }
+    .how_we_work_firstpage .text h1{
+        font-size: 40px;
+    }
+    .how_we_work_firstpage .text p{
+        font-size: 20px;
+    }
+    .how_we_work_thirdpage{
+        flex-direction: column  ;
+        padding: 80px 5%;
+    }
+    .how_we_work_thirdpage .left{
+        width: 100%;
+    }
+    .how_we_work_thirdpage .contact{
+        margin: 40px 0px;
+    }
+    .how_we_work_thirdpage .right{
+        width: 100%;
+    }
+    
+    /* WHY US */
+    
+    .whyus_firstpage{
+        height: 65vh;
+    }
+    .whyus_firstpage .text{
+        width: 100%;
+    }
+    .whyus_firstpage .text h1{
+        font-size: 40px;
+    }
+    .whyus_firstpage .text p{
+        font-size: 20px;
+    }
+    .whyus_thirdpage{
+        flex-direction: column  ;
+        padding: 80px 5%;
+    }
+    .whyus_thirdpage .left{
+        width: 100%;
+    }
+    .whyus_thirdpage .contact{
+        margin: 40px 0px;
+    }
+    .whyus_thirdpage .right{
+        width: 100%;
+    }
+    
+    /* CAREER PAGE */
+    .career_firstpage{
+        height: 65vh;
+    }
+    .career_firstpage .text{
+        width: 100%;
+    }
+    .career_firstpage .text h1{
+        font-size: 40px;
+    }
+    .career_firstpage .text p{
+        font-size: 20px;
+    }
+    .career_list{
+        flex-direction: column;
+    }
+    .career_list .left{
+        width: 100%;
+    }
+    .career_list .right{
+        margin-top: 10px;
+        width: 100%;
+    }
+    .career_list .right .ending .button{
+        font-size: 15px;
+    }
+
+
+    /* APPLICATION PAGE */
+
+    .application_firstpage{
+        height: 65vh;
+    }
+    .application_firstpage .text{
+        width: 100%;
+    }
+    .application_firstpage .text h1{
+        font-size: 40px;
+    }
+    .application_firstpage .text p{
+        font-size: 20px;
+    }
+    .application_secondpage form{
+        flex-direction: column;
+    }
+    .application_secondpage form .left{
+        width: 100%;
+        padding: 0px;
+        border: none;
+    }
+    .application_secondpage form .right{
+        width: 100%;
+        padding: 0px;
+        margin: 20px 0px 0px;
+        border: none;
+    }
+    .application_secondpage form .right .inline{
+        flex-wrap: wrap;
+    }
+    .application_secondpage form .right .first_name,.application_secondpage form .right .last_name{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width:481px){
+
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .header{
+        width: 100vw;
+        height: fit-content;
+        flex-direction: row-reverse;
+        position: relative;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    .header .show{
+        display: none;
+    }
+    .header .hidden{
+        display: block;
+    }
+    .header p{
+        writing-mode: horizontal-tb;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .header ul{
+        padding: 40px;
+        text-align: right;
+    }
+    .navbar{
+        position: absolute;
+        top: 60px;
+        right: 100%;
+        background-color: white;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: 95vh;
+        transition: 1s ease-in-out;
+    }
+    .second_navbar_show{
+        right: 0;
+    }
+    .body{
+        left: 0%;
+        width: 100vw;
+        border: none;
+        animation: none;
+    }
+    .body .logo{
+        display: none;
+    }
+    footer .signup_email{
+        flex-direction: column;
+        padding: 20px 0px;
+    }
+    footer .signup_email .email input{
+        width: 69%;
+    }
+    footer .signup_email>div{
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    
+    /* HOME PAGE */
+    
+    .home_firstpage{
+        height: 40vh;
+    }
+    .home_firstpage .slides .text{
+        height: 40vh;
+    }
+    .home_firstpage .slides .text .fa{
+        font-size: 30px;
+    }
+    .home_firstpage .slides .text h1{
+        font-size: 25px;
+        font-weight: bold;
+        line-height: normal;
+        width: 80%;
+    }
+    .home_secondpage{
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+    .home_secondpage .left{
+        width: 100%;
+        padding: 0px 0px 20px;
+    }
+    .home_secondpage .right{
+        width: 100%;
+    }   
+    .home_thirdpage{
+        flex-direction: column;
+        height: 100%;
+    }
+    .home_thirdpage .left{
+        width: 100%;
+        height: 100%;
+    }
+    .home_thirdpage .left_slide{
+        height: 75vh;
+    }
+    .home_thirdpage .left_slide .text{
+        height: 75vh;
+    }
+    .home_thirdpage .left_slide .image{
+        height: 75vh;
+    }
+    .home_thirdpage .right{
+        width: 100%;
+        height: 75vh;
+    }
+    .home_thirdpage .right .up{
+        height: 37.5vh;
+    }
+    .home_thirdpage .right .up .text{
+        height: 37.5vh;
+        padding-left: 5%;
+    }
+    .home_thirdpage .right .up .image{
+        height: 35vh;
+    } 
+    .home_thirdpage .right .down{
+        height: 32.5vh;
+        padding-left: 5%;
+    }
+    .home_fourthpage{
+        flex-direction: column;
+        height: 100%;
+    }
+    .home_fourthpage .left{
+        width: 100%;
+        height: 100vh;
+    }
+    .home_fourthpage .left .up{
+        padding-left: 5%;
+    }
+    .home_fourthpage .left .down{
+        padding-left: 5%;
+    }
+    .home_fourthpage .right{
+        width: 100%;
+        height: 100%;
+    }
+    .home_fourthpage .right_slide .text{
+        height: 75vh;
+        padding-left: 5%;
+    }
+    .home_fourthpage .right_slide .image{
+        height: 75vh;
+    }
+    .home_fifthpage{
+        flex-direction: column;
+        height: 100%;
+    }
+    .home_fifthpage .left{
+        width: 100%;
+        height: 75vh;
+        padding-left: 5%;
+    }
+    .home_fifthpage .right{
+        width: 100%;
+        padding-left: 5%;
+    }
+    .home_fifthpage .right_news{
+        margin-top: 0px;
+    }
+    .home_sixthpage{
+        flex-direction: column;
+        height: 100%;
+    }
+    .home_sixthpage .left{
+        width: 100%;
+        padding-left: 5%;
+    }
+    .home_sixthpage .right{
+        width: 100%;
+        padding-left: 5%;
+    }
+    .home_seventhpage{
+        flex-direction: column  ;
+        padding: 80px 5%;
+    }
+    .home_seventhpage .left{
+        width: 100%;
+    }
+    .home_seventhpage .contact{
+        margin: 40px 0px;
+    }
+    .home_seventhpage .right{
+        width: 100%;
+    }
+
+
+    /* NEWS PAGE */
+    .news_firstpage .firstpage_body{
+        flex-direction: column;
+    }
+    .news_firstpage .firstpage_body .left{
+        width: 100%;
+        height: 65vh;
+        padding-left: 5%;
+    }
+    .news_firstpage .firstpage_body .right{
+        width: 100%;
+        height: 100%;
+        padding: 40px 20px;
+    }
+
+
+    /* SERVICES PAGE */
+    .services_firstpage{
+        height: 65vh;
+    }
+    .services_firstpage .text{
+        width: 100%;
+    }
+    .services_thirdpage{
+        flex-wrap: wrap;
+    }
+    .services_thirdpage>div{
+        width: 50%;
+    }
+    .pricing_plan{
+        flex-wrap: wrap;
+    }
+    .pricing_plan>div{
+        width: 49%;
+        margin-bottom: 10px;
+    }
+    .services_fifth{
+        flex-direction: column  ;
+        padding: 80px 5%;
+    }
+    .services_fifth .left{
+        width: 100%;
+    }
+    .services_fifth .contact{
+        margin: 40px 0px;
+    }
+    .services_fifth .right{
+        width: 100%;
+    }
+
+    /* CONTACT US */
+
+    .contactus_firstpage{
+        height: 65vh;
+    }
+    .contactus_secondpage .left{
+        width: 40%;
+    }
+    .contactus_secondpage .right{
+        width: 50%;
+    }
+    .contactus_secondpage .right button{
+        width: 40%;
+    }
+    /* GALLERY PAGE */
+    
+    .gallery_firstpage{
+        height: 65vh;
+    }
+    .gallery_firstpage .text{
+        width: 100%;
+    }
+    .gallery_firstpage .text h1{
+        font-size: 40px;
+    }
+    .gallery_firstpage .text p{
+        font-size: 20px;
+    }
+    .gallery_secondpage .category .heading ul{
+        flex-wrap: wrap;
+    }
+    .gallery_secondpage .category .heading ul li{
+        margin: 10px 0px;
+    }
+    .gallery_secondpage .category{
+        flex-direction: column;
+    }
+    .gallery_secondpage .category .searching{
+        display: none;
+    }
+    .gallery_secondpage .galleries{
+        flex-wrap: wrap;
+    }
+    .gallery_secondpage .galleries>div{
+        width: 48%;
+    }
+    .gallery_thirdpage{
+        flex-direction: column  ;
+        padding: 80px 5%;
+    }
+    .gallery_thirdpage .left{
+        width: 100%;
+    }
+    .gallery_thirdpage .contact{
+        margin: 40px 0px;
+    }
+    .gallery_thirdpage .right{
+        width: 100%;
+    }
+    /* ABOUT US PAGE */
+    .about_firstpage{
+        height: 65vh;
+    }
+    .about_firstpage .text{
+        width: 100%;
+    }
+    .about_firstpage .text h1{
+        font-size: 40px;
+    }
+    .about_firstpage .text p{
+        font-size: 20px;
+    }
+    .about_secondpage{
+        flex-direction: column-reverse;
+    }
+    .about_secondpage>div{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .about_thirdpage{
+        flex-direction: column;
+    }
+    .about_thirdpage>div{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .about_fourthpage .team{
+        flex-wrap: wrap;
+    }
+    .about_fourthpage .team>div{
+        width: 48%;
+        margin: 10px 0px;
+    }
+    .about_thirdpage .right{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about_thirdpage .right img{
+        margin-bottom: 40px;
+    }
+    .about_fifthpage{
+        flex-direction: column  ;
+        padding: 80px 5%;
+    }
+    .about_fifthpage .left{
+        width: 100%;
+    }
+    .about_fifthpage .contact{
+        margin: 40px 0px;
+    }
+    .about_fifthpage .right{
+        width: 100%;
+    }
+    /* BOOKING */
+
+    .booking_firstpage{
+        height: 65vh;
+    }
+    .booking_firstpage .text{
+        width: 100%;
+    }
+    .booking_firstpage .text h1{
+        font-size: 40px;
+    }
+    .booking_firstpage .text p{
+        font-size: 20px;
+    }
+    .booking_secondpage form{
+        flex-direction: column;
+    }
+    .booking_secondpage form .left{
+        width: 100%;
+        padding: 0px;
+        border: none;
+    }
+    .booking_secondpage form .right{
+        width: 100%;
+        padding: 0px;
+        margin: 20px 0px 0px;
+        border: none;
+    }
+    .booking_secondpage form .right .inline{
+        flex-wrap: wrap;
+    }
+    .booking_secondpage form .right .first_name,.booking_secondpage form .right .last_name{
+        width: 100%;
+    }
+    /* HOW WE WORK */
+    .how_we_work_firstpage{
+        height: 65vh;
+    }
+    .how_we_work_firstpage .text{
+        width: 100%;
+    }
+    .how_we_work_firstpage .text h1{
+        font-size: 40px;
+    }
+    .how_we_work_firstpage .text p{
+        font-size: 20px;
+    }
+    .how_we_work_thirdpage{
+        flex-direction: column  ;
+        padding: 80px 5%;
+    }
+    .how_we_work_thirdpage .left{
+        width: 100%;
+    }
+    .how_we_work_thirdpage .contact{
+        margin: 40px 0px;
+    }
+    .how_we_work_thirdpage .right{
+        width: 100%;
+    }
+    /* WHY US */
+    .whyus_firstpage{
+        height: 65vh;
+    }
+    .whyus_firstpage .text{
+        width: 100%;
+    }
+    .whyus_firstpage .text h1{
+        font-size: 40px;
+    }
+    .whyus_firstpage .text p{
+        font-size: 20px;
+    }
+    .whyus_thirdpage{
+        flex-direction: column  ;
+        padding: 80px 5%;
+    }
+    .whyus_thirdpage .left{
+        width: 100%;
+    }
+    .whyus_thirdpage .contact{
+        margin: 40px 0px;
+    }
+    .whyus_thirdpage .right{
+        width: 100%;
+    }
+
+    /* CAREER PAGE */
+    .career_firstpage{
+        height: 65vh;
+    }
+    .career_firstpage .text{
+        width: 100%;
+    }
+    .career_firstpage .text h1{
+        font-size: 40px;
+    }
+    .career_firstpage .text p{
+        font-size: 20px;
+    }
+    .career_list .right .ending .button{
+        font-size: 15px;
+    }
+
+    /* APPLICATION PAGE */
+
+    .application_firstpage{
+        height: 65vh;
+    }
+    .application_firstpage .text{
+        width: 100%;
+    }
+    .application_firstpage .text h1{
+        font-size: 40px;
+    }
+    .application_firstpage .text p{
+        font-size: 20px;
+    }
+    .application_secondpage form{
+        flex-direction: column;
+    }
+    .application_secondpage form .left{
+        width: 100%;
+        padding: 0px;
+        border: none;
+    }
+    .application_secondpage form .right{
+        width: 100%;
+        padding: 0px;
+        margin: 20px 0px 0px;
+        border: none;
+    }
+    .application_secondpage form .right .inline{
+        flex-wrap: wrap;
+    }
+    .application_secondpage form .right .first_name,.application_secondpage form .right .last_name{
+        width: 100%;
+    }
+}
+

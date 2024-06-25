@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="whyus_firstpage">
+        <div class="text">
+            <h1>why us </h1>
+            <p>Hello, we are july first studio, a professional media house based in Port Harcourt, Nigeria.</p>
+        </div>
+    </div>
+    <div class="whyus_secondpage">
+        <h1>why choose us</h1>
+        <p>
+            You are about to have the final of your life and share in happy moments of laughter and beauty with that person or people that are important to you, we are your ride or die. Our job is to catch every second, so you and your loved ones can just let go and live in the moment.
+
+            Your story deserves to be told in a way that is real for you. You've found that special moment and that something that deserves to be immortalized through photography and film. We capture this connection and tell your story in it's truest form. That way, when you look back in 10, 20 even 50 years time, you'll know it was real. You feel like we could vibe? Leave us a message and let's kick start the journey
+        </p>
+    </div>
+    {% block script %}
+        <script src="{% static 'comment.js' %}"></script>
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <div class="career_firstpage">
+            <div class="text">
+                <h1>
+                    our career ....
+                </h1>
+                <p>Hello, we are July First Studio, a professional media house based in Port Harcourt, Nigeria.</p>
+            </div>
+        </div>
+        <div class="career_secondpage">
+            <div class="career_lists">
+                {% for career in careers %}
+                <div class="career_list">
+                    {% if career.pic %}
+                    <div class="left">
+                        <img src="{{career.pic.url}}" alt="">
+                    </div>
+                    {% endif %}
+                    <div class="right">
+                        <h1>{{career.title}}</h1>
+                        <p>
+                            {{career.content|linebreaksbr}}
+                        </p>
+                        <div class="ending">
+                            <p>
+                                {{career.date}}  || {{career.time}}
+                            </p>
+                            <div class="button">
+                                <a href="{% url 'application' %}">apply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% block script %}
+        <script src="{% static 'script/comment.js' %}"></script>
+    {% endblock %}    
+{% endblock %} 

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="news_firstpage">
+        <div class="firstpage_body">
+            <div class="left">
+                <h1>latest news and update</h1>
+            </div>
+            <div class="right_readmore">
+                <div class="news_readmore">
+                    <div class="image">
+                        {% if news.pic %}
+                        <img src="{{news.pic.url}}" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="text">
+                        <h1>{{news.title}}</h1>
+                        <br>
+                        {{news.content|linebreaksbr}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block script %}
+        <script src="{% static 'script/comment.js' %}"></script>
+    {% endblock %}
+{% endblock %}

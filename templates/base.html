@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsiveness.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 1500, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+    <title>july first studios</title>
+</head>
+<body class="main_body">
+    <header class="header">
+        <div class="click show">
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+            <i class="fa fa-times" aria-hidden="true"  onclick="closes()"></i>
+        </div>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">home</a></li>
+            <li><a href="{% url 'about' %}">about</a></li>
+            <li><a href="{% url 'services' %}">our services</a></li>
+            <li><a href="{% url 'gallery' %}">gallery</a></li>
+            <li><a href="{% url 'booking' %}">booking</a></li>
+            <li><a href="{% url 'career' %}">career opportunity</a></li>
+            <li><a href="{% url 'news' %}">our news</a></li>
+            <li><a href="{% url 'contact' %}">contact us</a></li>
+        </ul>
+        <div class="click hidden">
+            <i class="fa fa-bars" id="fa_bars" aria-hidden="true" onclick="Show_second_menu()"></i>
+            <i class="fa fa-times" id="fa_times" aria-hidden="true" onclick="Close_second_menu()"></i>
+        </div>
+        <p>july first studio</p>
+    </header>
+    <div class="body"  id="top">
+        {% block content %}
+        {% endblock %}
+        <div class="home_seventhpage">
+            <div class="left">
+                <h1>need help with professional photography? let's work together!</h1>
+                <div class="contact">
+                    <a href="{% url 'contact' %}">contact us</a>
+                </div>
+            </div>
+            <div class="right comment_slideshow">
+                {% for comment in comments %}
+                <div class="comments">
+                    <p>{{comment.comment}}</p>
+                    <div>
+                        <h2>
+                            {{comment.name}}
+                            <br>
+                            {{comment.email}}
+                        </h2>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <footer>
+            <div class="signup_email">
+                <div>
+                    <h1>Sign up to get latest update</h1>
+                    <p>
+                        Sign up for our monthly newsletter for the latest news & articles
+                    </p>
+                </div>
+                <div class="email">
+                    <form action="{% url 'base' %}" method="POST">
+                    {% csrf_token %} 
+                        {{form.email}}
+                        <button type="submit">submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer_content">
+                <div>
+                    <h3>july first studios</h3>
+                    <p>Our vision is to drive the global entertainment industry by providing outstanding services in the global media space. We are focused on delivering on our promises and customer expectations, we work with our clients/ customer to brind their desires to admirable reality.</p>
+                </div>
+                <div class="padding">
+                    <h3>quick links</h3>
+                    <ul>
+                        <li><a href="{% url 'about' %}">about us</a></li>
+                        <li><a href="{% url 'services' %}">our services</a></li>
+                        <li><a href="{% url 'booking' %}">booking</a></li>
+                        <li><a href="{% url 'contact' %}">contact us</a></li>
+                        <li><a href="{% url 'career' %}">career opportunities</a></li>
+                    </ul>
+                </div>
+                <div class="padding contact">
+                    <h3>contact</h3>
+                    <ul>
+                        <li>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+2347065934632">+2347065934632</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:julyfirststudio@gmail.com">julyfirststudio@gmail.com</a> 
+                        </li>
+                        <li>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            July First Studios. 6, Market road, Rumoumasi Junction Port Harcourt
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_ending">
+                <h4>Copyright © 2022 by july first studios. All rights reserved.</h4>
+                <div class="social_handles">
+                    <ul>
+                        <li><a href="https://web.facebook.com/profile.php?id=100085027773602"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/july_1studio/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <a href="#top">
+                    <div class="back">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    </div>
+                </a>
+            </div>
+        </footer>
+    </div>
+    {% block script %}
+    {% endblock %}
+</body>
+</html>

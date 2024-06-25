@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="about_firstpage">
+        <div class="text">
+            <h1>submited successfully </h1>
+            <p>we will get back to you in short time</p>
+        </div>
+    </div>
+    {% block script %}
+        <script src="{% static 'script/comment.js' %}"></script>
+    {% endblock %}
+{% endblock %} 

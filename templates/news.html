@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="news_firstpage">
+        <div class="firstpage_body">
+            <div class="left">
+                <h1>latest news and update</h1>
+            </div>
+            <div class="right">
+                {% for news_content in news %}
+                <div class="news">
+                    <div class="image">
+                        {% if news_content.pic %}
+                        <img src="{{news_content.pic.url}}" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="text">
+                        <h1>{{news_content.title}}</h1>
+                        {{news_content.content|slice:'50'}}....
+                    </div>
+                    <div class="read_more">
+                        <a href="{% url 'readmore' news_content.slug %}">read more ...</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% block script %}
+        <script src="{% static 'script/comment.js' %}"></script>
+    {% endblock %}
+{% endblock %}
